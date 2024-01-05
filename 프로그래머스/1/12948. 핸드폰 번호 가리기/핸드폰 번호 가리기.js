@@ -1,7 +1,3 @@
-function solution(phone_number) {
-    let result = [...phone_number];
-    for (i = 4; i < result.length; i++) {
-        result[result.length - (i + 1)] = "*"
-    }
-    return result.join("");
+function solution(s){
+    return "*".repeat(s.length - 4) + s.slice(-4);
 }
