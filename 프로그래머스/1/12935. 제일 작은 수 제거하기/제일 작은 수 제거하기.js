@@ -1,7 +1,8 @@
 function solution(arr) {
-    let result = []
+    let result = [];
+    let min = Math.min(...arr);
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== Math.min(...arr)) {
+        if (arr[i] !== min) {
             result.push(arr[i]);
         }
     }
