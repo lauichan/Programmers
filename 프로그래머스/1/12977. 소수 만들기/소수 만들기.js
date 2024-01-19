@@ -5,7 +5,7 @@ function solution(nums) {
             for (let k = j + 1; k < nums.length; k++) {
                 let num = nums[i] + nums[j] + nums[k];
                 let count = 0;
-                for (let l = 0; l < num; l++) {
+                for (let l = 0; l <= Math.sqrt(num); l++) {
                     if (num % l === 0) count++;
                 }
                 if (count === 1) result++;
