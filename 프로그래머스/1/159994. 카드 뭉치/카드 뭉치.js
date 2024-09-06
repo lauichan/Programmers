@@ -7,8 +7,8 @@ function solution(cards1, cards2, goal) {
         } else if (goal[i] === cards2[idx2]) {
             idx2++;
         } else {
-            return "No"
+            return "No";
         }
     }
-    return "Yes"
+    return "Yes";
 }
