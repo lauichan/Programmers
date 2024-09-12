@@ -1,11 +1,11 @@
 function solution(s){
-    let arr = []
-    
+    let count = 0
+
     for (let i = 0; i <= s.length; i++) {
-        if (s[i] ==="(") arr.push("(")
-        else if (s[i] ===")" && arr.at(-1) === "(") arr.pop()
-        else if (s[i] ===")") arr.push(")")
+        if (s[i] ==="(") count++;
+        else if (s[i] ===")" && count > 0) count--;
+        else if (s[i] ===")") count++;
     }
-    
-    return arr.length === 0;
+
+    return count === 0;
 }
